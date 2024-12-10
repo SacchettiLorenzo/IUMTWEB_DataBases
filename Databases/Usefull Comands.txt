@@ -1,0 +1,21 @@
+show dbs
+
+use RT_reviews
+
+db.createCollection("Reviews")
+
+db.Reviews.insertOne({
+    RT_link : "m/0814255",
+    movie_title : "Percy Jackson & the Olympians: The Lightning Thief",
+    review : [
+        {
+            critic_name: "Andrew L. Urban",
+            top_critic : false,
+            publisher_name: "Urban Cinefile",
+            review_type: "Fresh",
+            review_score: null,
+            review_date: Date("2010-02-06"),
+            review_content: "A fantasy adventure that fuses Greek mythology to contemporary American places and values. Anyone around 15 (give or take a couple of years) will thrill to the visual spectacle"
+        }
+    ]
+})
