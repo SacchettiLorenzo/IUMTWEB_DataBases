@@ -1,0 +1,13 @@
+//semi useledd join that show movies that has both reviews and oscar nominations
+db.createView("Orscar_Reviews","Reviews",[
+{
+$lookup:{
+from: "Oscars",
+localField:"movie_title",
+foreignField:"movie_title",
+as:"Orscar_Reviews_View"
+}
+},{$match: {"Orscar_ReviewsDocs":{$ne:[]}}}
+])
+
+db.Orscar_Reviews.find().
