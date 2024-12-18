@@ -15,6 +15,9 @@ CREATE TABLE Movies(
 CREATE TABLE Actors(
     id SERIAL,
     name TEXT,
+    summary TEXT,
+    section TEXT,
+    image_url TEXT,
     PRIMARY KEY (id)
 );
 
