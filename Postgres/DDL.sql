@@ -200,6 +200,7 @@ COMMIT;
 
 ROLLBACK ;
 
+
 SELECT * FROM movies LIMIT 10;
 
 COPY movies (id, name, date, tagline, description, minute, rating)
